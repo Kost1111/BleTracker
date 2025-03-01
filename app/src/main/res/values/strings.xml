@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BleTracker</string>
+    <string name="activity_history">История активности</string>
+    <string name="settings">Настройки</string>
+    <string name="language">Язык</string>
+    <string name="notifications">Уведомления</string>
+    <string name="theme">Тема</string>
+    <string name="clear_data">Очистить данные</string>
+    <string name="feedback">Обратная связь</string>
+    <string name="about_app">О приложении</string>
+
+</resources>
