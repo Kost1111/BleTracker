@@ -11,3 +11,7 @@ sealed class BottomNavItem(val route: String, val icon: ImageVector, val title: 
     data object History : BottomNavItem("history", Icons.Default.Info, "История")
     data object Settings : BottomNavItem("settings", Icons.Default.Settings, "Настройки")
 }
+
+sealed class Screens(val route: String) {
+    data object AboutApp: Screens(route = "about_app")
+}

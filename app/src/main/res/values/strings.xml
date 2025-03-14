@@ -8,5 +8,7 @@
     <string name="clear_data">Очистить данные</string>
     <string name="feedback">Обратная связь</string>
     <string name="about_app">О приложении</string>
+    <string name="back">Назад</string>
+    <string name="about_app_description">Это приложение разработано в учебных целях для отслеживания активности пользователей через BLE-маяки.</string>
 
 </resources>

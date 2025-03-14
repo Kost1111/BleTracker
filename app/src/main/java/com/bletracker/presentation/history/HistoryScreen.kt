@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -20,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.bletracker.R
 import com.bletracker.domain.model.ActivityRecord
+import com.bletracker.ui.theme.BleTrackerTheme
 
 
 @Composable
@@ -31,20 +33,23 @@ fun HistoryScreen(
     LaunchedEffect(Unit) {
         historyViewModel.loadActivityRecords()
     }
+    BleTrackerTheme {
+        Column(modifier = Modifier.fillMaxSize()) {
+            Text(
+                text = stringResource(R.string.activity_history),
+                style = MaterialTheme.typography.bodyLarge,
+                modifier = Modifier.padding(16.dp)
+            )
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        Text(
-            text = stringResource(R.string.activity_history),
-            style = MaterialTheme.typography.bodyLarge,
-            modifier = Modifier.padding(16.dp)
-        )
-
-        LazyColumn(modifier = Modifier.fillMaxSize()) {
-            items(activityRecords) { record ->
-                HistoryItem(record)
+            LazyColumn(modifier = Modifier.fillMaxSize()) {
+                items(activityRecords) { record ->
+                    HistoryItem(record)
+                }
             }
         }
     }
+
+
 }
 
 @Composable
