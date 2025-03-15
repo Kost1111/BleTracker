@@ -9,4 +9,13 @@
     <string name="about_app">About App</string>
     <string name="back">Back</string>
     <string name="about_app_description">This application is designed for educational purposes to track user activity through BLE beacons.</string>
+    <string name="back_button_description">Back</string>
+    <string name="activity_details">Activity Details</string>
+    <string name="timestamp_label">Time: %1$s</string>
+    <string name="event_label">Event: %1$s</string>
+    <string name="activity_trend_up">Activity is increasing</string>
+    <string name="activity_trend_down">Activity is decreasing</string>
+    <string name="average_time_in_zone">Average time in zone: %1$d min</string>
+    <string name="activity_chart">Activity Chart</string>
+    <string name="loading_text">Loading...</string>
 </resources>

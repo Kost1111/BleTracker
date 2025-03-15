@@ -3,9 +3,8 @@ package com.bletracker.di
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
-import com.bletracker.data.repository.HistoryRepositoryImpl
-import com.bletracker.domain.repository.HistoryRepository
-import com.bletracker.domain.usecase.GetActivityRecordsUseCase
+import com.bletracker.data.repository.ActivityRepositoryImpl
+import com.bletracker.domain.repository.ActivityRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,12 +22,8 @@ object AppModule {
     }
 
     @Provides
-    fun provideHistoryRepository(): HistoryRepository {
-        return HistoryRepositoryImpl()
-    }
-
-    @Provides
-    fun provideGetActivityRecordsUseCase(historyRepository: HistoryRepository): GetActivityRecordsUseCase {
-        return GetActivityRecordsUseCase(historyRepository)
+    @Singleton
+    fun provideActivityRepository(): ActivityRepository {
+        return ActivityRepositoryImpl()
     }
 }

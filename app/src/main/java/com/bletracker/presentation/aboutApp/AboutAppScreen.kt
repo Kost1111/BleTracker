@@ -41,7 +41,7 @@ fun AboutAppScreen(navController: NavController) {
                             )
                         }
                     },
-                    backgroundColor = Color.White
+                    backgroundColor = MaterialTheme.colorScheme.background
                 )
             }
         ) { paddingValues ->

@@ -10,5 +10,13 @@
     <string name="about_app">О приложении</string>
     <string name="back">Назад</string>
     <string name="about_app_description">Это приложение разработано в учебных целях для отслеживания активности пользователей через BLE-маяки.</string>
-
+    <string name="back_button_description">Назад</string>
+    <string name="activity_details">Детали активности</string>
+    <string name="timestamp_label">Время: %1$s</string>
+    <string name="event_label">Событие: %1$s</string>
+    <string name="activity_trend_up">Активность растет</string>
+    <string name="activity_trend_down">Активность падает</string>
+    <string name="average_time_in_zone">Среднее время в зоне: %1$d мин</string>
+    <string name="activity_chart">График активности</string>
+    <string name="loading_text">Загрузка...</string>
 </resources>
