@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "BleTracker"
 include(":app")
+include(":core")
+include(":ble")
