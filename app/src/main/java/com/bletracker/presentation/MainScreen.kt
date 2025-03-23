@@ -9,7 +9,6 @@ import androidx.navigation.NavHostController
 import com.bletracker.navigation.BottomNavigationBar
 import com.bletracker.navigation.NavGraph
 
-
 @Composable
 fun MainScreen(navController: NavHostController) {
     Scaffold(

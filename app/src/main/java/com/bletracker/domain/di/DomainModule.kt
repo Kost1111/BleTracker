@@ -15,5 +15,4 @@ class DomainModule {
     fun provideGetActivityRecordsUseCase(historyRepository: HistoryRepository): GetActivityRecordsUseCase {
         return GetActivityRecordsUseCase(historyRepository)
     }
-
 }

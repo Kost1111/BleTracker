@@ -19,4 +19,42 @@
     <string name="average_time_in_zone">Среднее время в зоне: %1$d мин</string>
     <string name="activity_chart">График активности</string>
     <string name="loading_text">Загрузка...</string>
+    <string name="global_status">Глобальный статус: %1$s</string>
+    <string name="unknown_device">Неизвестное устройство</string>
+    <string name="status">Статус: %1$s</string>
+    <string name="connected">Подключено</string>
+    <string name="connecting">Подключение...</string>
+    <string name="disconnected">Отключено</string>
+    <string name="rssi_value">RSSI: %1$d dBm</string>
+    <string name="distance_value">Расстояние: %1$s м</string>
+
+    <string name="device_connection">Подключение устройства</string>
+    <string name="device">Устройство: %1$s</string>
+    <string name="error_message">Ошибка: %1$s</string>
+    <string name="waiting_for_device_response">Ожидание ответа устройства...</string>
+    <string name="device_response">Ответ устройства: %1$s</string>
+    <string name="device_write_success">Успех записи на устройство: %1$s</string>
+    <string name="device_notification">Уведомление устройства: %1$s</string>
+
+    <string name="enable_notification">Включить уведомление</string>
+    <string name="enable_indication">Включить индикацию</string>
+
+    <string name="disconnect">Отключить</string>
+    <string name="error_connection">Ошибка подключения</string>
+    <string name="retry">Повторить</string>
+    <string name="device_info">Информация об устройстве</string>
+    <string name="device_name">Название: %s</string>
+    <string name="device_address">Адрес: %s</string>
+    <string name="firmware_version">Прошивка: %s</string>
+    <string name="rssi">RSSI: %d</string>
+    <string name="actions">Действия</string>
+    <string name="read_characteristic">Прочитать</string>
+    <string name="write_characteristic">Записать</string>
+    <string name="response_data">Данные ответа</string>
+    <string name="notification_received">Уведомление: %s</string>
+    <string name="write_success">Запись успешна</string>
+    <string name="no_data">Нет доступных данных</string>
+    <string name="unknown_error">Неизвестная ошибка</string>
+
+
 </resources>

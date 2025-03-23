@@ -5,5 +5,5 @@ data class UserActivity(
     val event: String,
     val trend: Int,
     val avgTime: Int,
-    val visits: List<Pair<Long, Float>>
+    val visits: List<Pair<Long, Float>>,
 )

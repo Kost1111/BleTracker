@@ -22,10 +22,9 @@ import com.bletracker.R
 import com.bletracker.domain.model.ActivityRecord
 import com.bletracker.ui.theme.BleTrackerTheme
 
-
 @Composable
 fun HistoryScreen(
-    historyViewModel: HistoryViewModel = hiltViewModel()
+    historyViewModel: HistoryViewModel = hiltViewModel(),
 ) {
     val activityRecords by historyViewModel.activityRecords.observeAsState(emptyList())
 
@@ -54,15 +53,16 @@ fun HistoryItem(record: ActivityRecord) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(8.dp),
+            .padding(8.dp)
 
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = "Пользователь: ${record.userId}", style = MaterialTheme.typography.bodyMedium)
+            Text(
+                text = "Пользователь: ${record.userId}",
+                style = MaterialTheme.typography.bodyMedium
+            )
             Text(text = "Время: ${DateFormat.format("HH:mm dd/MM/yyyy", record.timestamp)}")
             Text(text = "Сила сигнала: ${record.signalStrength} dBm")
         }
     }
 }
-
-
