@@ -14,15 +14,13 @@ import com.bletracker.navigation.Screens
 
 @Composable
 fun SettingsScreen(navController: NavController) {
-
     Column(modifier = Modifier.padding(16.dp)) {
-
-        TextButton(onClick = {
-            navController.navigate(Screens.AboutApp.route)
-        }
+        TextButton(
+            onClick = {
+                navController.navigate(Screens.AboutApp.route)
+            }
         ) {
             Text(text = stringResource(id = R.string.about_app))
         }
     }
 }
-

@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class GetUserActivityUseCase @Inject constructor(
-    private val repository: ActivityRepository
+    private val repository: ActivityRepository,
 ) {
     operator fun invoke(): Flow<List<UserActivity>> {
         return repository.getUserActivity()

@@ -5,8 +5,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.bletracker.presentation.aboutApp.AboutAppScreen
+import com.bletracker.presentation.devices.ActivityScreen
+import com.bletracker.presentation.devices.detail.DeviceConnectionScreen
 import com.bletracker.presentation.history.HistoryScreen
-import com.bletracker.presentation.home.ActivityScreen
 import com.bletracker.presentation.settings.SettingsScreen
 
 @Composable
@@ -19,7 +20,11 @@ fun NavGraph(navController: NavHostController) {
 
         // Other screen
         composable(Screens.AboutApp.route) { AboutAppScreen(navController) }
+
+        // Device detail screen
+        composable("device_detail/{deviceId}") { backStackEntry ->
+            val deviceId = backStackEntry.arguments?.getString("deviceId") ?: return@composable
+            DeviceConnectionScreen(deviceAddress = deviceId, onBackPressed = { navController.popBackStack() })
+        }
     }
 }
-
-

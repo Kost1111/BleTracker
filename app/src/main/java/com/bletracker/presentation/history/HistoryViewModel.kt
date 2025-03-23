@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HistoryViewModel @Inject constructor(
-    private val getActivityRecordsUseCase: GetActivityRecordsUseCase
+    private val getActivityRecordsUseCase: GetActivityRecordsUseCase,
 ) : ViewModel() {
     private val _activityRecords = MutableLiveData<List<ActivityRecord>>()
     val activityRecords: LiveData<List<ActivityRecord>> get() = _activityRecords

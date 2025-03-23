@@ -1,4 +1,3 @@
 package com.bletracker.domain.repository
 
-class BeaconSettingsRepository {
-}
+class BeaconSettingsRepository

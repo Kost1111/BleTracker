@@ -18,7 +18,7 @@ import javax.inject.Inject
 
 class GetBleDevicesUseCase @Inject constructor(
     private val deviceListRepository: DeviceListRepository,
-    @ApplicationContext private val context: Context
+    @ApplicationContext private val context: Context,
 ) {
     @SuppressLint("MissingPermission")
     fun getBleDeviceList(): Flow<List<ScanResult>> {
@@ -30,7 +30,6 @@ class GetBleDevicesUseCase @Inject constructor(
     }
 
     private var bluetoothGatt: BluetoothGatt? = null
-
 
     suspend fun startScanning() {
         deviceListRepository.startScanning()
@@ -49,7 +48,7 @@ class GetBleDevicesUseCase @Inject constructor(
                 override fun onConnectionStateChange(
                     gatt: BluetoothGatt,
                     status: Int,
-                    newState: Int
+                    newState: Int,
                 ) {
                     if (newState == BluetoothProfile.STATE_CONNECTED) {
                         Log.i("BLE", "Connected to device: ${device.name}, UUID: ${device.address}")
@@ -58,7 +57,10 @@ class GetBleDevicesUseCase @Inject constructor(
                         // Запрашиваем сервисы после подключения
                         gatt.discoverServices()
                     } else {
-                        Log.i("BLE", "Disconnected from device: ${device.name}, UUID: ${device.address}")
+                        Log.i(
+                            "BLE",
+                            "Disconnected from device: ${device.name}, UUID: ${device.address}"
+                        )
                         callback(gatt)
                     }
                 }
@@ -66,14 +68,18 @@ class GetBleDevicesUseCase @Inject constructor(
                 override fun onServicesDiscovered(gatt: BluetoothGatt, status: Int) {
                     if (status == BluetoothGatt.GATT_SUCCESS) {
                         val services = gatt.services
-                        Log.i("BLE", "Services discovered for device: ${device.name}, UUID: ${device.address}: ${services.size}")
+                        Log.i(
+                            "BLE",
+                            "Services discovered for device: ${device.name}, UUID: ${device.address}: ${services.size}"
+                        )
                     } else {
-                        Log.e("BLE", "Failed to discover services for device: ${device.name}, UUID: ${device.address}")
+                        Log.e(
+                            "BLE",
+                            "Failed to discover services for device: ${device.name}, UUID: ${device.address}"
+                        )
                     }
                 }
             }
         )
     }
-
-
 }

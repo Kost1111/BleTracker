@@ -6,7 +6,6 @@ import com.bleTracker.ble.bluetooth.blescanner.BleScanner
 import com.bletracker.domain.repository.DeviceListRepository
 import kotlinx.coroutines.flow.Flow
 
-
 @SuppressLint("MissingPermission")
 class DeviceListRepositoryImpl(private val bleSource: BleScanner) :
     DeviceListRepository {

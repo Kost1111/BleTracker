@@ -11,7 +11,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
-
 @Module
 @InstallIn(SingletonComponent::class)
 class DataModule {
@@ -21,12 +20,9 @@ class DataModule {
         return HistoryRepositoryImpl()
     }
 
-
     @Provides
     @Singleton
     fun provideDeviceListRepository(bleScanner: BleScanner): DeviceListRepository {
         return DeviceListRepositoryImpl(bleScanner)
     }
-
-
 }

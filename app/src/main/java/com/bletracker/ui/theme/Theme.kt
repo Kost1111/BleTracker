@@ -36,11 +36,10 @@ private val DarkColors = darkColorScheme(
     onError = White
 )
 
-
 @Composable
 fun BleTrackerTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable () -> Unit
+    content: @Composable () -> Unit,
 ) {
     MaterialTheme(
         colorScheme = if (darkTheme) DarkColors else LightColors,
