@@ -23,9 +23,9 @@ class BleScannerImpl(
 
     override fun onScanResult(callbackType: Int, result: ScanResult?) {
         if (result != null) {
-            // Фильтрация по имени устройства
+//             Фильтрация по имени устройства
             val deviceName = result.device.name
-            if (deviceName != null && deviceName.startsWith("Holy-IOT")) {
+            if (deviceName != null) {
                 deviceList[result.device.address] = result
                 trySend(deviceList.values.toList())
             }

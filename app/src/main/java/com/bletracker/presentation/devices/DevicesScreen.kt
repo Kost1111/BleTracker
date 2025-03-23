@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.annotation.StringRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -71,13 +72,18 @@ private fun BleDevicesList(
     devices: List<DeviceState>,
     onDeviceClick: (DeviceState) -> Unit,
 ) {
-    LazyColumn(modifier = Modifier.fillMaxSize()) {
-        items(devices) { device ->
+    LazyColumn(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        items(
+            items = devices,
+            key = { it.scanResult.device.address }
+        ) { device ->
             BleDeviceItem(
                 device = device,
                 onClick = { onDeviceClick(device) }
             )
-            Spacer(modifier = Modifier.padding(vertical = 4.dp))
         }
     }
 }
